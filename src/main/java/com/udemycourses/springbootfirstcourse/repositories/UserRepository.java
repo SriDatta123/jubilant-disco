@@ -12,5 +12,8 @@ import com.udemycourses.springbootfirstcourse.Entities.User;
 public interface UserRepository extends JpaRepository<User, Long>{
 	
 	public Optional<User> findByUsername(String username);
+	
+	
+	public boolean existsByUsernameOrSsn(String username, String ssn);
 
 }
